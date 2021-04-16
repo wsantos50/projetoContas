@@ -1,0 +1,62 @@
+<h5 class="card-title">Consultar Contas</h5>
+<p class="card-text">Para consultar uma conta, preencha os campos abaixo:</p>
+<hr>
+
+<form #formConsulta="ngForm" (submit)="consultarContas(formConsulta)">
+
+    <div class="row">       
+        <div class="col-md-3">
+            <label>Data de Início:</label>
+            <input type="date" name="dataInicio" ngModel class="form-control"/>
+        </div>
+        <div class="col-md-3">
+            <label>Data de Fim:</label>
+            <input type="date" name="dataFim" ngModel class="form-control"/>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <input type="submit" value="Realizar Pesquisa" class="btn btn-success" />
+        </div>
+    </div>
+
+</form>
+
+<table class="table mt-3">
+
+    <thead>
+        <tr>
+            <th>Nome da Conta</th>
+            <th>Data</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+            <th>
+                Operações
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a href="#" class="btn btn-primary btn-sm">Alterar</a>
+                &nbsp;
+                <a href="#" class="btn btn-danger btn-sm">Excluir</a>
+            </td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                Quantidade de registros: 0
+            </td>
+        </tr>
+    </tfoot>
+
+</table>

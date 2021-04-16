@@ -1,0 +1,24 @@
+<h5 class="card-title">Autenticar Usuário</h5>
+<p class="card-text">Para acessar sua conta de usuário, preencha os campos abaixo:</p>
+<hr>
+
+<form #formLogin="ngForm" (submit)="autenticarUsuario(formLogin)">
+
+    <div class="row">
+        <div class="col-md-6">
+            <label>Email de Acesso:</label>
+            <input type="text" name="email" ngModel class="form-control" placeholder="Ex: joaosilva@gmail.com" />
+        </div>
+        <div class="col-md-6">
+            <label>Senha de Acesso:</label>
+            <input type="password" name="senha" ngModel class="form-control" placeholder="Digite aqui" />
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <input type="submit" value="Acessar Sistema" class="btn btn-primary" />
+        </div>
+    </div>
+
+</form>

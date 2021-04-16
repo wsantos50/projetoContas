@@ -1,0 +1,46 @@
+<h5 class="card-title">Cadastrar Contas</h5>
+<p class="card-text">Para criar uma conta, preencha os campos abaixo:</p>
+<hr>
+
+<form #formCadastro="ngForm" (submit)="cadastrarConta(formCadastro)">
+
+    <div class="row">
+        <div class="col-md-6">
+            <label>Nome da Conta:</label>
+            <input type="text" name="nome" ngModel class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label>Data da Conta:</label>
+            <input type="date" name="data" ngModel class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label>Valor da Conta:</label>
+            <input type="text" name="valor" ngModel class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <label>Descrição:</label>
+            <textarea class="form-control" name="descricao" ngModel></textarea>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <label>Tipo da Conta:</label>
+            <select class="form-select" name="tipo" ngModel>
+                <option value="">Escolha uma opção</option>
+                <option value="RECEITA">Receita (Conta a receber)</option>
+                <option value="DESPESA">Despesa (Conta a pagar)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <input type="submit" value="Realizar Cadastro" class="btn btn-success" />
+        </div>
+    </div>
+
+</form>

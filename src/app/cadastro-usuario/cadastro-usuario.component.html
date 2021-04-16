@@ -1,0 +1,36 @@
+<h5 class="card-title">Cadastrar Usuário</h5>
+<p class="card-text">Para criar sua conta de usuário, preencha os campos abaixo:</p>
+<hr>
+
+<form #formCadastro="ngForm" (submit)="cadastrarUsuario(formCadastro)">
+
+    <div class="row">
+        <div class="col-md-6">
+            <label>Nome:</label>
+            <input type="text" name="nome" ngModel class="form-control" placeholder="Ex: João da Silva" />
+        </div>
+        <div class="col-md-6">
+            <label>Email:</label>
+            <input type="text" name="email" ngModel class="form-control" placeholder="ex: joaosilva@gmail.com" />
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <label>Senha:</label>
+            <input type="password" name="senha" ngModel class="form-control" placeholder="Digite aqui" />
+        </div>
+        <div class="col-md-6">
+            <label>Confirme a Senha:</label>
+            <input type="password" name="senhaConfirmacao" ngModel class="form-control" placeholder="Digite aqui" />
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <input type="submit" value="Realizar Cadastro" class="btn btn-success" />
+        </div>
+    </div>
+
+</form>
+
